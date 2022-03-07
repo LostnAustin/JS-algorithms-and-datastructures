@@ -7,7 +7,27 @@ const myPromise = new Promise((resolve, reject) => {
 
 
 
-
 const makeServerRequest = new Promise((resolve, reject) => {
 
+});
+
+
+
+
+
+
+Write the resolve reject component of the Promise Function:
+
+
+const makeServerRequest = new Promise((resolve, reject) => {
+  // responseFromServer represents a response from a server
+  let responseFromServer;
+    
+  if(responseFromServer) {
+    // Change this line
+    resolve("We got the data");
+  } else {  
+    reject("Data not received")
+    // Change this line
+  }
 });
