@@ -1,0 +1,11 @@
+const greeting = (name = "Anonymous") => "Hello " + name;
+
+console.log(greeting("John"));
+console.log(greeting());
+The console will display the strings Hello John and Hello Anonymous.
+
+
+
+
+
+const increment = (number, value = 1 ) => number + value;
