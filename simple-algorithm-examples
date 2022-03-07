@@ -1,0 +1,21 @@
+CONVERT Celsius to Fahrenheit
+
+function convertToF(celsius) {
+  let fahrenheit = (celsius * (9/5)) + 32;
+
+  return fahrenheit;
+}
+
+convertToF(30);
+
+
+
+
+
+REVERSE A STRING
+
+function reverseString(str) {
+  return str.split('').reverse().join('');
+}
+
+reverseString("hello");
