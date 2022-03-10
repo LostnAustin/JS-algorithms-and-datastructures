@@ -1,0 +1,44 @@
+RETURN THE LOWEST INDEX WHERE A SECOND VALUE SHOULD BE INSERTED INTO AN ARRAY ONCE IT HAS BEEN SORTED.THE RETURN VALUE SHOULD BE A NUMBER.
+
+There are several ways to approach this. Some that I liked the most:
+
+
+
+1.
+
+function getIndexToIns(arr, num) {
+  arr.sort((a, b) => a - b);
+
+    for (let i=0; i < arr.length; i++) {
+      if (arr[i] >= num )
+      return i
+    }
+  return arr.length;
+}
+
+getIndexToIns([40, 60], 50);
+
+
+
+
+
+
+2.
+function getIndexToIns(arr, num) {
+  return arr.filter(val => num > val).length;
+}
+
+
+
+
+
+
+3.
+function getIndexToIns(arr, num) {
+  return arr
+    .concat(num)
+    .sort((a, b) => a - b)
+    .indexOf(num);
+}
+
+getIndexToIns([1, 3, 4], 2);
