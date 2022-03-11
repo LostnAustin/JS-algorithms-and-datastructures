@@ -1,0 +1,32 @@
+Write a function that splits an array (1st arg) into groups the length of size (2nd arg) and returns them as a. two-dimensional array.
+
+Notes: 
+1. create emtpy array for results. Maintain immutability of original array
+2. create a for loop that runs through the entire array, using size
+3. PUSH the SLICE results of each iteration to our finalArr, and then return it.
+
+function chunkArrayInGroups(arr,size) {
+  let finalArr = [];
+    for (let i = 0; i < arr.length; i+= size) {
+      finalArr.push(arr.slice(i, i + size))
+      }
+      return finalArr
+    
+    //test
+  chunkArrayInGroups(["a", "b", "c", "d"], 2);
+  
+  
+  
+  
+  
+  
+  
+  a 2nd approach:
+  
+  function chunkArrayInGroups(arr, size) {
+  let newArr = [];
+  while (arr.length > 0) {
+    newArr.push(arr.splice(0, size));
+  }
+  return newArr;
+}
