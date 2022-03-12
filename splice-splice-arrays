@@ -1,11 +1,24 @@
+The full syntax of the splice() method is as follows:  Array.splice(start, removeCount, newItem, newItem, newItem, ...)
+
+const arr = [0, 1, 2, 3, 4, 5, 6]
+let newArr = arr.slice();       //copy arr, maintain immutability of arr
+newArr.splice(1, 4)          // removes 1,2,3,4 from the newArr
+
+
+ADD and REMOVE array values at once:
+let months = ["January", "February", "Monday", "Tuesday"];
+let days = months.splice(2, 2, "March", "April");
+
+console.log(days); // ["Monday", "Tuesday"]
+console.log(months); // ["January", "February", "March", "April"]
+
+
+
+
 You are given two arrays and an index.
-
 Copy each element of the first array into the second array, in order.
-
 Begin inserting elements at index n of the second array.
-
 Return the resulting array. The input arrays should remain the same after the function runs.
-
 
 
 function frankenSplice(arr1, arr2, n) {
@@ -18,8 +31,6 @@ function frankenSplice(arr1, arr2, n) {
 }
 
 frankenSplice([1, 2, 3], [4, 5, 6], 1);
-
-
 
 
 ##Create a new array from arr2 using slice, then iterate through arr1, and  use the splice() function to insert the item into index n of arr3. 
