@@ -1,0 +1,14 @@
+Using the `prototype` method in the constructor reduces duplicate copies of variables if you have other objects. For instance many objects would all create duplicate variables
+
+
+
+
+function Dog(name) {
+  Dog.prototype.numLegs = 2;
+  this.name = name;
+}
+
+
+
+// Only change code above this line
+let beagle = new Dog("Snoopy");
