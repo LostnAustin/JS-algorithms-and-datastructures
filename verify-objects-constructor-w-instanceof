@@ -1,0 +1,12 @@
+When a constructor function creates a new object, it is defined as a 'instaneof' operator. This operator allows a comparison of an object to a constructor, returning a true/false response depending on if the object was created with a constructor
+
+
+
+function House(numBedrooms) {
+  this.numBedrooms = numBedrooms;
+}
+
+let numBedrooms = 2
+let myHouse = new House(numBedrooms);
+
+myHouse instanceof House;
